@@ -41,9 +41,19 @@ export class Infomaniak implements INodeType {
 						description: 'Manage accounts and organizations',
 					},
 					{
+						name: 'AI Tool',
+						value: 'aiTools',
+						description: 'AI-powered tools: Chat, Image Generation, Speech-to-Text',
+					},
+					{
 						name: 'Domain',
 						value: 'domain',
 						description: 'Manage domains and DNS records',
+					},
+					{
+						name: 'kDrive',
+						value: 'kdrive',
+						description: 'Manage kDrive cloud storage',
 					},
 					{
 						name: 'Mail Hosting',
@@ -51,14 +61,9 @@ export class Infomaniak implements INodeType {
 						description: 'Manage email hosting and mailboxes',
 					},
 					{
-						name: 'Web Hosting',
-						value: 'webHosting',
-						description: 'Manage web hosting sites',
-					},
-					{
-						name: 'kDrive',
-						value: 'kdrive',
-						description: 'Manage kDrive cloud storage',
+						name: 'Newsletter',
+						value: 'newsletter',
+						description: 'Manage newsletters and campaigns',
 					},
 					{
 						name: 'Public Cloud',
@@ -71,24 +76,19 @@ export class Infomaniak implements INodeType {
 						description: 'Manage Swiss Backup services',
 					},
 					{
-						name: 'Newsletter',
-						value: 'newsletter',
-						description: 'Manage newsletters and campaigns',
-					},
-					{
 						name: 'Team',
 						value: 'team',
 						description: 'Manage team and workspaces',
 					},
 					{
-						name: 'AI Tools',
-						value: 'aiTools',
-						description: 'AI-powered tools: Chat, Image Generation, Speech-to-Text',
-					},
-					{
 						name: 'VOD',
 						value: 'vod',
 						description: 'Video on Demand: Manage videos, channels, players, and analytics',
+					},
+					{
+						name: 'Web Hosting',
+						value: 'webHosting',
+						description: 'Manage web hosting sites',
 					},
 				],
 				default: 'account',
@@ -148,10 +148,16 @@ export class Infomaniak implements INodeType {
 				},
 				options: [
 					{
-						name: 'List Domains',
-						value: 'listDomains',
-						description: 'List all domains',
-						action: 'List domains',
+						name: 'Create DNS Record',
+						value: 'createDnsRecord',
+						description: 'Create a new DNS record',
+						action: 'Create DNS record',
+					},
+					{
+						name: 'Delete DNS Record',
+						value: 'deleteDnsRecord',
+						description: 'Delete a DNS record',
+						action: 'Delete DNS record',
 					},
 					{
 						name: 'Get Domain',
@@ -166,22 +172,16 @@ export class Infomaniak implements INodeType {
 						action: 'List DNS records',
 					},
 					{
-						name: 'Create DNS Record',
-						value: 'createDnsRecord',
-						description: 'Create a new DNS record',
-						action: 'Create DNS record',
+						name: 'List Domains',
+						value: 'listDomains',
+						description: 'List all domains',
+						action: 'List domains',
 					},
 					{
 						name: 'Update DNS Record',
 						value: 'updateDnsRecord',
 						description: 'Update a DNS record',
 						action: 'Update DNS record',
-					},
-					{
-						name: 'Delete DNS Record',
-						value: 'deleteDnsRecord',
-						description: 'Delete a DNS record',
-						action: 'Delete DNS record',
 					},
 				],
 				default: 'listDomains',
@@ -200,22 +200,10 @@ export class Infomaniak implements INodeType {
 				},
 				options: [
 					{
-						name: 'List Mail Hostings',
-						value: 'listMailHostings',
-						description: 'List all mail hosting services',
-						action: 'List mail hostings',
-					},
-					{
-						name: 'Get Mail Hosting',
-						value: 'getMailHosting',
-						description: 'Get mail hosting details',
-						action: 'Get mail hosting',
-					},
-					{
-						name: 'List Mailboxes',
-						value: 'listMailboxes',
-						description: 'List all mailboxes',
-						action: 'List mailboxes',
+						name: 'Create Alias',
+						value: 'createAlias',
+						description: 'Create email alias',
+						action: 'Create alias',
 					},
 					{
 						name: 'Create Mailbox',
@@ -224,16 +212,16 @@ export class Infomaniak implements INodeType {
 						action: 'Create mailbox',
 					},
 					{
-						name: 'Update Mailbox',
-						value: 'updateMailbox',
-						description: 'Update mailbox settings',
-						action: 'Update mailbox',
-					},
-					{
 						name: 'Delete Mailbox',
 						value: 'deleteMailbox',
 						description: 'Delete a mailbox',
 						action: 'Delete mailbox',
+					},
+					{
+						name: 'Get Mail Hosting',
+						value: 'getMailHosting',
+						description: 'Get mail hosting details',
+						action: 'Get mail hosting',
 					},
 					{
 						name: 'List Aliases',
@@ -242,10 +230,22 @@ export class Infomaniak implements INodeType {
 						action: 'List aliases',
 					},
 					{
-						name: 'Create Alias',
-						value: 'createAlias',
-						description: 'Create email alias',
-						action: 'Create alias',
+						name: 'List Mail Hostings',
+						value: 'listMailHostings',
+						description: 'List all mail hosting services',
+						action: 'List mail hostings',
+					},
+					{
+						name: 'List Mailboxes',
+						value: 'listMailboxes',
+						description: 'List all mailboxes',
+						action: 'List mailboxes',
+					},
+					{
+						name: 'Update Mailbox',
+						value: 'updateMailbox',
+						description: 'Update mailbox settings',
+						action: 'Update mailbox',
 					},
 				],
 				default: 'listMailHostings',
@@ -264,22 +264,16 @@ export class Infomaniak implements INodeType {
 				},
 				options: [
 					{
-						name: 'List Hostings',
-						value: 'listHostings',
-						description: 'List all web hosting accounts',
-						action: 'List hostings',
+						name: 'Create Database',
+						value: 'createDatabase',
+						description: 'Create a new database',
+						action: 'Create database',
 					},
 					{
 						name: 'Get Hosting',
 						value: 'getHosting',
 						description: 'Get hosting details',
 						action: 'Get hosting',
-					},
-					{
-						name: 'List Sites',
-						value: 'listSites',
-						description: 'List all sites',
-						action: 'List sites',
 					},
 					{
 						name: 'Get Site',
@@ -290,14 +284,20 @@ export class Infomaniak implements INodeType {
 					{
 						name: 'List Databases',
 						value: 'listDatabases',
-						description: 'List databases',
+						description: 'List all databases',
 						action: 'List databases',
 					},
 					{
-						name: 'Create Database',
-						value: 'createDatabase',
-						description: 'Create a new database',
-						action: 'Create database',
+						name: 'List Hostings',
+						value: 'listHostings',
+						description: 'List all web hosting accounts',
+						action: 'List hostings',
+					},
+					{
+						name: 'List Sites',
+						value: 'listSites',
+						description: 'List all sites',
+						action: 'List sites',
 					},
 				],
 				default: 'listHostings',
@@ -316,30 +316,6 @@ export class Infomaniak implements INodeType {
 				},
 				options: [
 					{
-						name: 'List Drives',
-						value: 'listDrives',
-						description: 'List all kDrives',
-						action: 'List drives',
-					},
-					{
-						name: 'Get Drive',
-						value: 'getDrive',
-						description: 'Get kDrive details',
-						action: 'Get drive',
-					},
-					{
-						name: 'List Files',
-						value: 'listFiles',
-						description: 'List files in a directory',
-						action: 'List files',
-					},
-					{
-						name: 'Get File Info',
-						value: 'getFileInfo',
-						description: 'Get file information',
-						action: 'Get file info',
-					},
-					{
 						name: 'Create Folder',
 						value: 'createFolder',
 						description: 'Create a new folder',
@@ -350,6 +326,30 @@ export class Infomaniak implements INodeType {
 						value: 'deleteFile',
 						description: 'Delete a file or folder',
 						action: 'Delete file',
+					},
+					{
+						name: 'Get Drive',
+						value: 'getDrive',
+						description: 'Get kDrive details',
+						action: 'Get drive',
+					},
+					{
+						name: 'Get File Info',
+						value: 'getFileInfo',
+						description: 'Get file information',
+						action: 'Get file info',
+					},
+					{
+						name: 'List Drives',
+						value: 'listDrives',
+						description: 'List all kDrives',
+						action: 'List drives',
+					},
+					{
+						name: 'List Files',
+						value: 'listFiles',
+						description: 'List files in a directory',
+						action: 'List files',
 					},
 					{
 						name: 'Share File',
@@ -374,10 +374,10 @@ export class Infomaniak implements INodeType {
 				},
 				options: [
 					{
-						name: 'List Projects',
-						value: 'listProjects',
-						description: 'List all cloud projects',
-						action: 'List projects',
+						name: 'Get Instance',
+						value: 'getInstance',
+						description: 'Get instance details',
+						action: 'Get instance',
 					},
 					{
 						name: 'List Instances',
@@ -386,10 +386,16 @@ export class Infomaniak implements INodeType {
 						action: 'List instances',
 					},
 					{
-						name: 'Get Instance',
-						value: 'getInstance',
-						description: 'Get instance details',
-						action: 'Get instance',
+						name: 'List Projects',
+						value: 'listProjects',
+						description: 'List all cloud projects',
+						action: 'List projects',
+					},
+					{
+						name: 'Reboot Instance',
+						value: 'rebootInstance',
+						description: 'Reboot a cloud instance',
+						action: 'Reboot instance',
 					},
 					{
 						name: 'Start Instance',
@@ -402,12 +408,6 @@ export class Infomaniak implements INodeType {
 						value: 'stopInstance',
 						description: 'Stop a cloud instance',
 						action: 'Stop instance',
-					},
-					{
-						name: 'Reboot Instance',
-						value: 'rebootInstance',
-						description: 'Reboot a cloud instance',
-						action: 'Reboot instance',
 					},
 				],
 				default: 'listProjects',
@@ -466,16 +466,10 @@ export class Infomaniak implements INodeType {
 				},
 				options: [
 					{
-						name: 'List Newsletters',
-						value: 'listNewsletters',
-						description: 'List all newsletters',
-						action: 'List newsletters',
-					},
-					{
-						name: 'List Campaigns',
-						value: 'listCampaigns',
-						description: 'List all campaigns',
-						action: 'List campaigns',
+						name: 'Add Contact',
+						value: 'addContact',
+						description: 'Add a new contact',
+						action: 'Add contact',
 					},
 					{
 						name: 'Create Campaign',
@@ -484,10 +478,10 @@ export class Infomaniak implements INodeType {
 						action: 'Create campaign',
 					},
 					{
-						name: 'Send Campaign',
-						value: 'sendCampaign',
-						description: 'Send a campaign',
-						action: 'Send campaign',
+						name: 'List Campaigns',
+						value: 'listCampaigns',
+						description: 'List all campaigns',
+						action: 'List campaigns',
 					},
 					{
 						name: 'List Contacts',
@@ -496,10 +490,16 @@ export class Infomaniak implements INodeType {
 						action: 'List contacts',
 					},
 					{
-						name: 'Add Contact',
-						value: 'addContact',
-						description: 'Add a new contact',
-						action: 'Add contact',
+						name: 'List Newsletters',
+						value: 'listNewsletters',
+						description: 'List all newsletters',
+						action: 'List newsletters',
+					},
+					{
+						name: 'Send Campaign',
+						value: 'sendCampaign',
+						description: 'Send a campaign',
+						action: 'Send campaign',
 					},
 				],
 				default: 'listNewsletters',
@@ -597,12 +597,23 @@ export class Infomaniak implements INodeType {
 					},
 				},
 				options: [
-					// Channel Operations
 					{
-						name: 'List Channels',
-						value: 'listChannels',
-						description: 'List all VOD channels',
-						action: 'List channels',
+						name: 'Create Folder',
+						value: 'createFolder',
+						description: 'Create a new folder',
+						action: 'Create folder',
+					},
+					{
+						name: 'Create Player',
+						value: 'createPlayer',
+						description: 'Create a new video player',
+						action: 'Create player',
+					},
+					{
+						name: 'Delete Video',
+						value: 'deleteVideo',
+						description: 'Delete a video',
+						action: 'Delete video',
 					},
 					{
 						name: 'Get Channel',
@@ -610,12 +621,11 @@ export class Infomaniak implements INodeType {
 						description: 'Get channel information',
 						action: 'Get channel',
 					},
-					// Media Operations
 					{
-						name: 'List Videos',
-						value: 'listVideos',
-						description: 'List all videos in a channel',
-						action: 'List videos',
+						name: 'Get Statistics',
+						value: 'getStatistics',
+						description: 'Get video or channel statistics',
+						action: 'Get statistics',
 					},
 					{
 						name: 'Get Video',
@@ -624,10 +634,34 @@ export class Infomaniak implements INodeType {
 						action: 'Get video',
 					},
 					{
-						name: 'Upload Video',
-						value: 'uploadVideo',
-						description: 'Upload a new video',
-						action: 'Upload video',
+						name: 'List Channels',
+						value: 'listChannels',
+						description: 'List all VOD channels',
+						action: 'List channels',
+					},
+					{
+						name: 'List Encodings',
+						value: 'listEncodings',
+						description: 'List available encoding profiles',
+						action: 'List encodings',
+					},
+					{
+						name: 'List Folders',
+						value: 'listFolders',
+						description: 'List all folders in a channel',
+						action: 'List folders',
+					},
+					{
+						name: 'List Players',
+						value: 'listPlayers',
+						description: 'List all video players',
+						action: 'List players',
+					},
+					{
+						name: 'List Videos',
+						value: 'listVideos',
+						description: 'List all videos in a channel',
+						action: 'List videos',
 					},
 					{
 						name: 'Update Video',
@@ -636,50 +670,10 @@ export class Infomaniak implements INodeType {
 						action: 'Update video',
 					},
 					{
-						name: 'Delete Video',
-						value: 'deleteVideo',
-						description: 'Delete a video',
-						action: 'Delete video',
-					},
-					// Folder Operations
-					{
-						name: 'List Folders',
-						value: 'listFolders',
-						description: 'List all folders in a channel',
-						action: 'List folders',
-					},
-					{
-						name: 'Create Folder',
-						value: 'createFolder',
-						description: 'Create a new folder',
-						action: 'Create folder',
-					},
-					// Player Operations
-					{
-						name: 'List Players',
-						value: 'listPlayers',
-						description: 'List all video players',
-						action: 'List players',
-					},
-					{
-						name: 'Create Player',
-						value: 'createPlayer',
-						description: 'Create a new video player',
-						action: 'Create player',
-					},
-					// Analytics
-					{
-						name: 'Get Statistics',
-						value: 'getStatistics',
-						description: 'Get video or channel statistics',
-						action: 'Get statistics',
-					},
-					// Encoding
-					{
-						name: 'List Encodings',
-						value: 'listEncodings',
-						description: 'List available encoding profiles',
-						action: 'List encodings',
+						name: 'Upload Video',
+						value: 'uploadVideo',
+						description: 'Upload a new video',
+						action: 'Upload video',
 					},
 				],
 				default: 'listVideos',
@@ -743,12 +737,12 @@ export class Infomaniak implements INodeType {
 				options: [
 					{ name: 'A', value: 'A' },
 					{ name: 'AAAA', value: 'AAAA' },
+					{ name: 'CAA', value: 'CAA' },
 					{ name: 'CNAME', value: 'CNAME' },
 					{ name: 'MX', value: 'MX' },
-					{ name: 'TXT', value: 'TXT' },
 					{ name: 'NS', value: 'NS' },
 					{ name: 'SRV', value: 'SRV' },
-					{ name: 'CAA', value: 'CAA' },
+					{ name: 'TXT', value: 'TXT' },
 				],
 				default: 'A',
 				required: true,
@@ -1275,7 +1269,7 @@ export class Infomaniak implements INodeType {
 						resource: ['aiTools'],
 					},
 				},
-				description: 'The AI API product identifier. Use the API endpoint to retrieve your product ID',
+				description: 'The AI API product identifier. Use the API endpoint to retrieve your product ID.',
 			},
 
 			// Chat Completion Parameters
@@ -1328,9 +1322,9 @@ export class Infomaniak implements INodeType {
 								name: 'role',
 								type: 'options',
 								options: [
+									{ name: 'Assistant', value: 'assistant' },
 									{ name: 'System', value: 'system' },
 									{ name: 'User', value: 'user' },
-									{ name: 'Assistant', value: 'assistant' },
 								],
 								default: 'user',
 								description: 'The role of the message author',
@@ -1384,7 +1378,7 @@ export class Infomaniak implements INodeType {
 						operation: ['generateImage', 'photoMaker'],
 					},
 				},
-				description: 'The text prompt to generate the image. For Photo Maker, use trigger words like "man img", "woman img"',
+				description: 'The text prompt to generate the image. For Photo Maker, use trigger words like "man img", "woman img".',
 			},
 
 			{
@@ -1449,7 +1443,25 @@ export class Infomaniak implements INodeType {
 					},
 				},
 				options: [
-					// Chat Completion Options
+					{
+						displayName: 'Image Size',
+						name: 'size',
+						type: 'options',
+						options: [
+							{ name: '1024x1024', value: '1024x1024' },
+							{ name: '1024x1792', value: '1024x1792' },
+							{ name: '1792x1024', value: '1792x1024' },
+						],
+						default: '1024x1024',
+						description: 'The size of the generated images',
+					},
+					{
+						displayName: 'Language',
+						name: 'language',
+						type: 'string',
+						default: 'en',
+						description: 'Language code (e.g., en, fr, es, de, it)',
+					},
 					{
 						displayName: 'Max Tokens',
 						name: 'max_tokens',
@@ -1462,16 +1474,25 @@ export class Infomaniak implements INodeType {
 						description: 'Maximum number of tokens to generate',
 					},
 					{
-						displayName: 'Temperature',
-						name: 'temperature',
+						displayName: 'Negative Prompt',
+						name: 'negative_prompt',
+						type: 'string',
+						typeOptions: {
+							rows: 2,
+						},
+						default: '',
+						description: 'What to avoid in the generation (max 350 chars)',
+					},
+					{
+						displayName: 'Number of Images',
+						name: 'n',
 						type: 'number',
 						typeOptions: {
-							minValue: 0,
-							maxValue: 2,
-							numberStepSize: 0.1,
+							minValue: 1,
+							maxValue: 5,
 						},
-						default: 0.5,
-						description: 'Sampling temperature (0 = focused, 2 = random)',
+						default: 1,
+						description: 'Number of images to generate',
 					},
 					{
 						displayName: 'Profile Type',
@@ -1486,46 +1507,36 @@ export class Infomaniak implements INodeType {
 						description: 'Generation profile for output style',
 					},
 					{
+						displayName: 'Quality',
+						name: 'quality',
+						type: 'options',
+						options: [
+							{ name: 'HD', value: 'hd' },
+							{ name: 'Standard', value: 'standard' },
+						],
+						default: 'standard',
+						description: 'The quality of the generated images',
+					},
+					{
+						displayName: 'Response Format',
+						name: 'response_format',
+						type: 'options',
+						options: [
+							{ name: 'JSON', value: 'json' },
+							{ name: 'SRT', value: 'srt' },
+							{ name: 'Text', value: 'text' },
+							{ name: 'Verbose JSON', value: 'verbose_json' },
+							{ name: 'VTT', value: 'vtt' },
+						],
+						default: 'text',
+						description: 'The format of the transcription output',
+					},
+					{
 						displayName: 'Stream',
 						name: 'stream',
 						type: 'boolean',
 						default: false,
 						description: 'Whether to stream the response',
-					},
-					// Image Generation Options
-					{
-						displayName: 'Number of Images',
-						name: 'n',
-						type: 'number',
-						typeOptions: {
-							minValue: 1,
-							maxValue: 5,
-						},
-						default: 1,
-						description: 'Number of images to generate',
-					},
-					{
-						displayName: 'Image Size',
-						name: 'size',
-						type: 'options',
-						options: [
-							{ name: '1024x1024', value: '1024x1024' },
-							{ name: '1024x1792', value: '1024x1792' },
-							{ name: '1792x1024', value: '1792x1024' },
-						],
-						default: '1024x1024',
-						description: 'The size of the generated images',
-					},
-					{
-						displayName: 'Quality',
-						name: 'quality',
-						type: 'options',
-						options: [
-							{ name: 'Standard', value: 'standard' },
-							{ name: 'HD', value: 'hd' },
-						],
-						default: 'standard',
-						description: 'The quality of the generated images',
 					},
 					{
 						displayName: 'Style',
@@ -1547,36 +1558,16 @@ export class Infomaniak implements INodeType {
 						description: 'The style of the generated image',
 					},
 					{
-						displayName: 'Negative Prompt',
-						name: 'negative_prompt',
-						type: 'string',
+						displayName: 'Temperature',
+						name: 'temperature',
+						type: 'number',
 						typeOptions: {
-							rows: 2,
+							minValue: 0,
+							maxValue: 2,
+							numberStepSize: 0.1,
 						},
-						default: '',
-						description: 'What to avoid in the generation (max 350 chars)',
-					},
-					// Audio Options
-					{
-						displayName: 'Language',
-						name: 'language',
-						type: 'string',
-						default: 'en',
-						description: 'Language code (e.g., en, fr, es, de, it)',
-					},
-					{
-						displayName: 'Response Format',
-						name: 'response_format',
-						type: 'options',
-						options: [
-							{ name: 'JSON', value: 'json' },
-							{ name: 'Text', value: 'text' },
-							{ name: 'SRT', value: 'srt' },
-							{ name: 'VTT', value: 'vtt' },
-							{ name: 'Verbose JSON', value: 'verbose_json' },
-						],
-						default: 'text',
-						description: 'The format of the transcription output',
+						default: 0.5,
+						description: 'Sampling temperature (0 = focused, 2 = random)',
 					},
 				],
 			},
@@ -1693,13 +1684,6 @@ export class Infomaniak implements INodeType {
 				},
 				options: [
 					{
-						displayName: 'Name',
-						name: 'name',
-						type: 'string',
-						default: '',
-						description: 'Video name',
-					},
-					{
 						displayName: 'Description',
 						name: 'description',
 						type: 'string',
@@ -1710,6 +1694,13 @@ export class Infomaniak implements INodeType {
 						description: 'Video description',
 					},
 					{
+						displayName: 'Name',
+						name: 'name',
+						type: 'string',
+						default: '',
+						description: 'Video name',
+					},
+					{
 						displayName: 'Published',
 						name: 'published',
 						type: 'boolean',
@@ -1717,18 +1708,18 @@ export class Infomaniak implements INodeType {
 						description: 'Whether the video is published',
 					},
 					{
-						displayName: 'Validated',
-						name: 'validated',
-						type: 'boolean',
-						default: false,
-						description: 'Whether the video is validated',
-					},
-					{
 						displayName: 'Tags',
 						name: 'tags',
 						type: 'string',
 						default: '',
 						description: 'Comma-separated tags',
+					},
+					{
+						displayName: 'Validated',
+						name: 'validated',
+						type: 'boolean',
+						default: false,
+						description: 'Whether the video is validated',
 					},
 				],
 			},
@@ -1842,20 +1833,6 @@ export class Infomaniak implements INodeType {
 						description: 'Whether to auto-validate uploaded videos',
 					},
 					{
-						displayName: 'Include Subtitles',
-						name: 'include_subtitles',
-						type: 'boolean',
-						default: false,
-						description: 'Whether to include subtitles in video data',
-					},
-					{
-						displayName: 'Include Chapters',
-						name: 'include_chapters',
-						type: 'boolean',
-						default: false,
-						description: 'Whether to include chapters in video data',
-					},
-					{
 						displayName: 'Date From',
 						name: 'date_from',
 						type: 'string',
@@ -1868,6 +1845,20 @@ export class Infomaniak implements INodeType {
 						type: 'string',
 						default: '',
 						description: 'Filter statistics to this date (YYYY-MM-DD)',
+					},
+					{
+						displayName: 'Include Chapters',
+						name: 'include_chapters',
+						type: 'boolean',
+						default: false,
+						description: 'Whether to include chapters in video data',
+					},
+					{
+						displayName: 'Include Subtitles',
+						name: 'include_subtitles',
+						type: 'boolean',
+						default: false,
+						description: 'Whether to include subtitles in video data',
 					},
 				],
 			},
@@ -1918,27 +1909,10 @@ export class Infomaniak implements INodeType {
 						type: 'number',
 						typeOptions: {
 							minValue: 1,
-							maxValue: 500,
+
 						},
 						default: 50,
 						description: 'Max number of results to return',
-					},
-					{
-						displayName: 'Page',
-						name: 'page',
-						type: 'number',
-						typeOptions: {
-							minValue: 1,
-						},
-						default: 1,
-						description: 'Page number for pagination',
-					},
-					{
-						displayName: 'Order By',
-						name: 'order_by',
-						type: 'string',
-						default: '',
-						description: 'Field to order results by',
 					},
 					{
 						displayName: 'Order',
@@ -1956,6 +1930,23 @@ export class Infomaniak implements INodeType {
 						],
 						default: 'asc',
 						description: 'Order direction',
+					},
+					{
+						displayName: 'Order By',
+						name: 'order_by',
+						type: 'string',
+						default: '',
+						description: 'Field to order results by',
+					},
+					{
+						displayName: 'Page',
+						name: 'page',
+						type: 'number',
+						typeOptions: {
+							minValue: 1,
+						},
+						default: 1,
+						description: 'Page number for pagination',
 					},
 					{
 						displayName: 'Search',

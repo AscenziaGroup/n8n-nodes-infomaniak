@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-logo.png" alt="n8n" height="60">
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://www.infomaniak.com/favicon.ico" alt="Infomaniak" height="60">
+  <img src="https://raw.githubusercontent.com/AscenziaGroup/n8n-nodes-infomaniak/main/nodes/Infomaniak/infomaniak.svg" alt="Infomaniak" height="60">
 </p>
 
 <p align="center">
@@ -44,7 +44,7 @@ This n8n community node provides comprehensive integration with Infomaniak's sui
 
 ### ✨ Key Features
 
-- **1700+ API Endpoints** - Comprehensive coverage of Infomaniak services
+- **Comprehensive Coverage** - Support for major Infomaniak services
 - **OpenAI Compatible** - AI Tools follow OpenAI standards for easy migration
 - **Streaming Support** - Real-time data streaming for chat and video
 - **Batch Operations** - Efficient bulk processing capabilities
@@ -305,7 +305,7 @@ See [CHANGELOG.md](CHANGELOG.md) for a full list of changes.
 - ✅ 11 core services implemented
 - ✅ AI Tools integration (Chat, Images, Speech)
 - ✅ VOD management (Video on Demand)
-- ✅ 1700+ API endpoints covered
+- ✅ Comprehensive API coverage
 - ⚠️ **Note**: Beta version, please report issues
 
 ## 🐛 Known Issues & Beta Limitations

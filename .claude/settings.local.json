@@ -21,7 +21,14 @@
       "Bash(git log:*)",
       "Bash(git rm:*)",
       "Bash(git filter-branch:*)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(npm whoami:*)",
+      "Bash(npm logout)",
+      "Bash(npm pack:*)",
+      "Bash(npm login)",
+      "Bash(npm publish:*)",
+      "Bash(npm run lint:*)",
+      "Bash(node:*)"
     ],
     "deny": [],
     "ask": [],
