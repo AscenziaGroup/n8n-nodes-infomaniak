@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone:*)",
+      "Bash(xcopy:*)",
+      "WebFetch(domain:developer.infomaniak.com)",
+      "WebSearch",
+      "WebFetch(domain:www.infomaniak.com)",
+      "WebFetch(domain:api.infomaniak.com)",
+      "Bash(npm install)",
+      "Bash(npm run build:*)",
+      "Bash(python:*)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": [],
+    "additionalDirectories": [
+      "D:\\"
+    ]
+  }
+}

@@ -1,19 +1,24 @@
 {
-  "name": "n8n-nodes-<...>",
+  "name": "n8n-nodes-infomaniak",
   "version": "0.1.0",
-  "description": "",
+  "description": "n8n nodes for Infomaniak API integration",
   "keywords": [
-    "n8n-community-node-package"
+    "n8n-community-node-package",
+    "infomaniak",
+    "hosting",
+    "email",
+    "domain",
+    "cloud"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/AscenziaGroup/n8n-nodes-infomaniak",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Ascenzia",
+    "email": "contact@ascenzia.ch"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/AscenziaGroup/n8n-nodes-infomaniak.git"
   },
   "engines": {
     "node": ">=20.15"
@@ -33,12 +38,10 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
+      "dist/credentials/InfomaniakApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/Infomaniak/Infomaniak.node.js"
     ]
   },
   "devDependencies": {

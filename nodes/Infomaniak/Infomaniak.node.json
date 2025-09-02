@@ -1,0 +1,28 @@
+{
+	"node": "n8n-nodes-infomaniak.infomaniak",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": [
+		"Communication",
+		"Data & Storage",
+		"Development"
+	],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://developer.infomaniak.com"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://developer.infomaniak.com"
+			}
+		]
+	},
+	"alias": ["Infomaniak", "hosting", "mail", "domain", "cloud"],
+	"subcategories": {
+		"Communication": ["Email"],
+		"Data & Storage": ["Cloud & Storage"],
+		"Development": ["Development Tools"]
+	}
+}
