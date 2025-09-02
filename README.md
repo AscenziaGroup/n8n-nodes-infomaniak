@@ -8,6 +8,7 @@
 
 <p align="center">
   <a href="https://www.npmjs.com/package/n8n-nodes-infomaniak"><img src="https://img.shields.io/npm/v/n8n-nodes-infomaniak.svg" alt="npm version"></a>
+  <img src="https://img.shields.io/badge/status-beta-orange.svg" alt="Beta Status">
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
   <a href="https://n8n.io"><img src="https://img.shields.io/badge/n8n-community-FF6D5A.svg" alt="n8n Community"></a>
   <a href="https://developer.infomaniak.com"><img src="https://img.shields.io/badge/Infomaniak-API-0050FF.svg" alt="Infomaniak API"></a>
@@ -15,6 +16,7 @@
 
 <p align="center">
   <strong>Powerful Infomaniak integration for n8n workflow automation</strong><br>
+  🧪 <strong>Beta Version</strong> - Currently in testing phase<br>
   Developed by <a href="https://ascenzia.ch">Ascenzia</a>
 </p>
 
@@ -298,18 +300,31 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 See [CHANGELOG.md](CHANGELOG.md) for a full list of changes.
 
-### Latest Version (0.1.0)
-- ✅ Initial release
-- ✅ 11 core services
-- ✅ AI Tools integration
-- ✅ VOD management
-- ✅ 1700+ endpoints
+### Latest Version (0.1.0-beta.1)
+- 🧪 **Beta Release** - Testing phase
+- ✅ 11 core services implemented
+- ✅ AI Tools integration (Chat, Images, Speech)
+- ✅ VOD management (Video on Demand)
+- ✅ 1700+ API endpoints covered
+- ⚠️ **Note**: Beta version, please report issues
 
-## 🐛 Known Issues
+## 🐛 Known Issues & Beta Limitations
 
+**⚠️ Beta Testing Notice:**
+This is a beta version currently undergoing testing. Please report any issues you encounter.
+
+**Current Known Issues:**
 - VOD upload requires Base64 encoding for file method
 - AI streaming not yet supported in n8n UI
 - Some statistics endpoints may have delayed data
+- Full testing coverage still in progress
+- Documentation may need refinements based on user feedback
+
+**Beta Testing Help:**
+- Report bugs via GitHub Issues
+- Share feedback on missing features
+- Test with your specific use cases
+- Help improve documentation
 
 ## 📚 Resources
 
