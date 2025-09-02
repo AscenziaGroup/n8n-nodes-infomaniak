@@ -28,7 +28,8 @@
       "Bash(npm login)",
       "Bash(npm publish:*)",
       "Bash(npm run lint:*)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(npm version:*)"
     ],
     "deny": [],
     "ask": [],
