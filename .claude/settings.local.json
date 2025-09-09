@@ -29,7 +29,9 @@
       "Bash(npm publish:*)",
       "Bash(npm run lint:*)",
       "Bash(node:*)",
-      "Bash(npm version:*)"
+      "Bash(npm version:*)",
+      "WebFetch(domain:www.npmjs.com)",
+      "Bash(npm unpublish:*)"
     ],
     "deny": [],
     "ask": [],
